@@ -1,7 +1,13 @@
 module.exports = (client, message) => {
+    
     // Ignore all bots
     if (message.author.bot) return;
-  
+    //talk event i guess
+    switch(message.content.toLowerCase()){
+		case "bran" && "know is bran":
+			message.channel.send("<:unyu:1012816853820780584>");
+			break;
+	}
     // Ignore messages not starting with the prefix (in config.json)
     if (message.content.indexOf(client.config.prefix) !== 0) return;
   
@@ -12,6 +18,7 @@ module.exports = (client, message) => {
     // Grab the command data from the client.commands Enmap
     const cmd = client.commands.get(command);
 
+    // If the command doen't exist
     if (!cmd) {
         return message.channel.send("nub");
     };
