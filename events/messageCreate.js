@@ -4,9 +4,12 @@ module.exports = (client, message) => {
     if (message.author.bot) return;
     //talk event i guess
     switch(message.content.toLowerCase()){
-		case "bran" && "know is bran":
+		case "bran":
 			message.channel.send("<:unyu:1012816853820780584>");
 			break;
+        case "know is bran":
+        message.channel.send("<:unyu:1012816853820780584>")
+        break;
 	}
     // Ignore messages not starting with the prefix (in config.json)
     if (message.content.indexOf(client.config.prefix) !== 0) return;
